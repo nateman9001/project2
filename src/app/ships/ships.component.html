@@ -1,23 +1,26 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div style="text-align:center">
   <h1>
-    Ship Information
+    Destinations
   </h1>
 </div>
 <div class="container">
-<h2>Ships Available:</h2>
+<h2>Planets Visiting:</h2>
+<h2>{{planet.name | uppercase}} Details</h2>
+<div><span>id: </span>{{planet.id}}</div>
+<div><span>planet: </span>{{planet.name}}</div>
+
+<h2>Compatible Ships</h2>
+<ul class="ships">
+  <li *ngFor="let ship of ships">
+    <span class="badge">{{ship.id}}</span> {{ship.name}}
+  </li>
+</ul>
 <form class="forms" action="/#">
-  <label for="shipName">Ship Name</label><br>
-  <input [(ngModel)]="ship.name" type="text" name="shipName" placeholder="Enter Ship Name"><br>
-  <label for="cargo">Cargo Capacity</label><br>
-  <input type="text" name="cargo" placeholder="Enter Cargo Capacity"><br>
-  <label for="passengers">Passengers</label><br>
-  <input type="text" name="passengers" placeholder="Enter Number of Passengers"><br>
-  <label for="destination">Destination</label><br>
-  <input type="text" name="destination" placeholder="Enter Destination"><br>
-  <input type="submit" id="submitBtn" value="Find Compatible Ships">
+  <label for="planet">Next Planet</label><br>
+  <input type="text" name="planet" placeholder="Enter Next Planet"><br>
+  <label for="ship">Select Compatible Ship</label><br>
+  <input type="text" name="ship" placeholder="Enter Ship Name"><br><br>
+  <input type="submit" id="submitBtn" value="Find Navigation">
 </form>
 </div>
-<h2>{{ship.name | uppercase}} Details</h2>
-<div><span>id: </span>{{ship.id}}</div>
-<div><span>ship: </span>{{ship.name}}</div>
