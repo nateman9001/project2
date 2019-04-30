@@ -1,0 +1,23 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    Ship Information
+  </h1>
+</div>
+<div class="container">
+<h2>Ships Available:</h2>
+<form class="forms" action="/#">
+  <label for="shipName">Ship Name</label><br>
+  <input [(ngModel)]="ship.name" type="text" name="shipName" placeholder="Enter Ship Name"><br>
+  <label for="cargo">Cargo Capacity</label><br>
+  <input type="text" name="cargo" placeholder="Enter Cargo Capacity"><br>
+  <label for="passengers">Passengers</label><br>
+  <input type="text" name="passengers" placeholder="Enter Number of Passengers"><br>
+  <label for="destination">Destination</label><br>
+  <input type="text" name="destination" placeholder="Enter Destination"><br>
+  <input type="submit" id="submitBtn" value="Find Compatible Ships">
+</form>
+</div>
+<h2>{{ship.name | uppercase}} Details</h2>
+<div><span>id: </span>{{ship.id}}</div>
+<div><span>ship: </span>{{ship.name}}</div>
