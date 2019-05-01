@@ -6,6 +6,6 @@ import com.revature.model.Passenger;
 
 public interface PassengerRepository {
 	void save(Passenger passenger);
-	List<Passenger> findAll();
-	Passenger findByName(String name);
+	List<Passenger> getAllPassengers();
+	Passenger getPassengerByName(String name);
 }

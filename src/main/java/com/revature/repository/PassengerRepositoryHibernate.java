@@ -26,7 +26,7 @@ public class PassengerRepositoryHibernate implements PassengerRepository {
 	
 	@SuppressWarnings("unchecked")
 	@Override
-	public List<Passenger> findAll() {
+	public List<Passenger> getAllPassengers() {
 		return sessionFactory.getCurrentSession().createCriteria(Passenger.class).list();
 	}
 
@@ -36,7 +36,7 @@ public class PassengerRepositoryHibernate implements PassengerRepository {
 	}
 
 	@Override
-	public Passenger findByName(String name) {
+	public Passenger getPassengerByName(String name) {
 		try {
 			return (Passenger) sessionFactory.getCurrentSession().createCriteria(Passenger.class)
 				.add(Restrictions.like("name", name))

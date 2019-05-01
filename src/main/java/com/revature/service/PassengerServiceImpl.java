@@ -21,7 +21,7 @@ public class PassengerServiceImpl implements PassengerService {
 	
 	@Override
 	public List<Passenger> getAllPassengers() {
-		return passengerRepository.findAll();
+		return passengerRepository.getAllPassengers();
 	}
 	public void setPassengerRepository(PassengerRepository passengerRepository) {
 		this.passengerRepository = passengerRepository;
@@ -46,6 +46,6 @@ public class PassengerServiceImpl implements PassengerService {
 
 	@Override
 	public Passenger getPassenger(String name) {
-		return passengerRepository.findByName(name);
+		return passengerRepository.getPassengerByName(name);
 	}
 }

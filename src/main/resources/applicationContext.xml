@@ -21,7 +21,8 @@
 	<!-- Hibernate integration with contextual sessions -->
 	<bean name="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
 		<property name="driverClassName" value="oracle.jdbc.driver.OracleDriver"/>
-		<property name="url" value="jdbc:oracle:thin:@birlindatabase.cydrmm5renh1.us-east-2.rds.amazonaws.com:1521:ORCL"/>
+		<!-- input correct credentials here -->
+		<property name="url" value="jdbc:oracle:thin:@somedatabase.change.us-east-2.rds.amazonaws.com:1521:ORCL"/>
 		<property name="username" value="PROJECT2"/>
 		<property name="password" value="p4ssw0rd"/>
 	</bean>
