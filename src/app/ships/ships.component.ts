@@ -8,16 +8,13 @@ import { SHIPS } from '../mock-ships';
   styleUrls: ['./ships.component.css']
 })
 export class ShipsComponent implements OnInit {
-  /*ship: Ship = {
-    id: 1,
-    name: 'X Wing',
-    cargo_capacity: 110,
-    passengers: 0
-  };*/
-  ship: Ship;
+  ships = SHIPS;
+  selectedShip: Ship;
   constructor() { }
 
   ngOnInit() {
   }
-
+  onSelect(ship: Ship): void {
+    this.selectedShip = ship;
+  }
 }
